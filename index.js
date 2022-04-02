@@ -17,12 +17,9 @@ formEl.onsubmit = function(e) {
   e.preventDefault()
   // save name element's content to cookies
   // save textarea's content to localstorage
-  function setCookie(nameSpan, textarea) {
-    textarea.textContent = localNote
-    nameSpan.value = 
-    formEl.value = localNote
-    document.cookie = nameSpan
-  }
+    localStorage.setItem(textarea.value)
+    document.cookie.setItem(nameSpan.textContent) 
+    document.cookie = nameSpan.textContent
 
   setCookie('span')
 
