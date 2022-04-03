@@ -2,13 +2,13 @@
 var nameSpan = document.querySelector('span')
 var formEl = document.querySelector('form')
 var clear = document.querySelector('#clear')
-var textarea = document.querySelector('textarea')
+var textArea = document.querySelector('textarea')
 
 // Retrieve name and note content from cookies and localstorage
 // Then apply them to elements on the page
 // YOUR CODE HERE
-var newTitle = localStorage.getItem('span')
-var localNote = localStorage.getItem('notes')
+var newTitle = document.cookie || 0
+textArea.value = localStorage.getItem('textarea')
 
 
 
@@ -17,15 +17,10 @@ formEl.onsubmit = function(e) {
   e.preventDefault()
   // save name element's content to cookies
   // save textarea's content to localstorage
-    localStorage.setItem(textarea.value)
-    document.cookie.setItem(nameSpan.textContent) 
-    document.cookie = nameSpan.textContent
-
-  setCookie('span')
+    localStorage.setItem('textarea', textArea.value)
+    document.cookie = newTitle.textContent
 
   
-  
-
   // triggers thumbs up animation
   this.elements.save.classList.add('emoji')
 }
@@ -34,7 +29,7 @@ clear.onclick = function() {
   // Clear textarea's value
   // Clear localstorage's content
   // YOUR CODE HERE
-  textarea.innerHTML = ""
+  textArea.innerHTML = ""
   localStorage.clear()
   // triggers thumbs up animation
   this.classList.add('emoji')
