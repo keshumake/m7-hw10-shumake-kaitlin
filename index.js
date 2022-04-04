@@ -7,35 +7,35 @@ var textArea = document.querySelector('textarea')
 // Retrieve name and note content from cookies and localstorage
 // Then apply them to elements on the page
 // YOUR CODE HERE
-newTitle = document.cookie
-nameSpan.textContent = newTitle
+newTitle = document.cookie;
+nameSpan.textContent = newTitle;
 
 
-textArea.value = localStorage.getItem('textarea')
+textArea.value = localStorage.getItem('textarea');
 
 
 
 formEl.onsubmit = function(e) {
   // prevents form submission
-  e.preventDefault()
+  e.preventDefault();
   // save name element's content to cookies
   // save textarea's content to localstorage
-    localStorage.setItem('textarea', textArea.value)
-    document.cookie = nameSpan.textContent
+    localStorage.setItem('textarea', textArea.value);
+    document.cookie = nameSpan.textContent;
 
   
   // triggers thumbs up animation
-  this.elements.save.classList.add('emoji')
+  this.elements.save.classList.add('emoji');
 }
 
 clear.onclick = function() {
   // Clear textarea's value
   // Clear localstorage's content
   // YOUR CODE HERE
-  textArea.innerHTML = ""
-  localStorage.clear()
+  textArea.innerHTML = " ";
+  localStorage.clear();
   // triggers thumbs up animation
-  this.classList.add('emoji')
+  this.classList.add('emoji');
 }
 
 // this code allows repeated thumbs up animations
