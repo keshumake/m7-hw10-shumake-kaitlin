@@ -7,9 +7,10 @@ var textArea = document.querySelector('textarea')
 // Retrieve name and note content from cookies and localstorage
 // Then apply them to elements on the page
 // YOUR CODE HERE
-const newTitle = nameSpan.textContent
-
 newTitle = document.cookie || 0
+var newTitle = nameSpan.textContent
+
+
 textArea.value = localStorage.getItem('textarea')
 
 
