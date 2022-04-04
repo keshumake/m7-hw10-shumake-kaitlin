@@ -20,7 +20,7 @@ formEl.onsubmit = function(e) {
   // save name element's content to cookies
   // save textarea's content to localstorage
     localStorage.setItem('textarea', textArea.value)
-    document.cookie = nameSpan.textContent
+    document.cookie = newTitle.textContent
 
   
   // triggers thumbs up animation
