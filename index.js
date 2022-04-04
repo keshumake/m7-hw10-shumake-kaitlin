@@ -8,7 +8,7 @@ var textArea = document.querySelector('textarea')
 // Then apply them to elements on the page
 // YOUR CODE HERE
 newTitle = document.cookie || 0
-var newTitle = nameSpan.textContent
+nameSpan.textContent = newTitle
 
 
 textArea.value = localStorage.getItem('textarea')
@@ -21,7 +21,7 @@ formEl.onsubmit = function(e) {
   // save name element's content to cookies
   // save textarea's content to localstorage
     localStorage.setItem('textarea', textArea.value)
-    document.cookie = newTitle.textContent
+    document.cookie = nameSpan.textContent
 
   
   // triggers thumbs up animation
